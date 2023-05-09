@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encrypter</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <section>
+          <img
+            width="50px"
+            src="https://media.glassdoor.com/sqll/2500530/alura-squarelogo-1602197362646.png"
+            alt="Alura"
+            srcset=""
+          />
+          <img
+            width="50px"
+            src="https://yt3.ggpht.com/a/AGF-l7_gxaZktmHADjcM5nVmCyQeupZS2vf15n638A=s900-mo-c-c0xffffffff-rj-k-no"
+            alt=""
+            srcset=""
+          />
+        </section>
+
+        <section class="mainFocus">
+          <textarea
+            id="TextArea"
+            onclick="ocultarModal()"
+            name="textToEncode"
+            placeholder="Insert a text here"
+          ></textarea>
+
+          <span id="atencionMessage">Only lower letters, no accents</span>
+
+          <section class="mainButtons">
+            <button
+              type="submit"
+              class="buttonEncode"
+              onclick="validarCampoEncode()"
+            >
+              Encode!
+            </button>
+            <button
+              type="submit"
+              class="buttonDecode"
+              onclick="validarCampoDecode()"
+            >
+              Decode!
+            </button>
+          </section>
+        </section>
+      </article>
+
+      <article class="articleModalMessageNotFound">
+        <section id="modal">
+          <img
+            id="imageTextNotFound"
+            src="./textNotFound.png"
+            alt="Text not found"
+          />
+          <section class="warning">
+            <h2 class="titleModal">Any message was found</h2>
+            <p class="contentModal">Please add the text you want to encrypt</p>
+          </section>
+        </section>
+
+        <section id="resultmodal">
+          <textarea
+            id="resultTextArea"
+            name="textToEncode"
+            placeholder="Insert a text here"
+          ></textarea>
+
+          <button
+            type="submit"
+            id="btnCopy"
+            class="buttonEncode buttonCopy"
+            onclick="copyText()"
+          >
+            Copy!
+          </button>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">Developed with love by: Rubian Ruiz</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

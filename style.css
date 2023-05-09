@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+textarea {
+  resize: none;
+}
+#imageTextNotFound {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+  }
+
+  #TextArea {
+    display: block;
+    height: 40vh;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 5px 0px 0px 0px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+  }
+  ::placeholder {
+    color: gray;
+    font-size: 22px;
+    display: inline;
+    padding: 4px 4px 10px 4px;
+  }
+  #atencionMessage {
+    background-image: url(./atencion.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+  .buttonEncode,
+  .buttonDecode {
+    display: block;
+    margin: 0 auto;
+    width: 85vw;
+    height: 5vh;
+    border-radius: 15px;
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+  }
+  .buttonEncode {
+    max-width: 500px;
+    color: #fff;
+    background-color: #0a3871;
+    border: none;
+  }
+  .buttonDecode {
+    max-width: 500px;
+    color: #0a3871;
+    background-color: #fff;
+    border: solid 1px;
+  }
+  #modal {
+    display: none;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px -3px rgba(0, 0, 0, 0.75);
+    width: 85vw;
+    background-color: white;
+  }
+  .titleModal {
+    padding: 20px;
+    text-align: center;
+  }
+  .contentModal {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+  #resultTextArea {
+    display: block;
+    border: none;
+    height: 40vh;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  #resultmodal {
+    display: none;
+  }
+  /* Estilos para dispositivos móviles */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #TextArea {
+    display: block;
+    border: none;
+    height: 40vh;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: 30px;
+  }
+  #atencionMessage {
+    background-image: url(./atencion.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left;
+    padding-left: 20px;
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-left: 55px;
+    display: flex;
+  }
+
+  .mainButtons {
+    display: flex;
+    gap: 30px;
+    margin: 15px 15px 15px 15px;
+  }
+  .buttonEncode,
+  .buttonDecode {
+    display: block;
+    width: 35%;
+    height: 50px;
+    border-radius: 15px;
+
+    margin: auto;
+    font-size: 16px;
+  }
+  .buttonEncode {
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    color: #0a3871;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0a3871;
+  }
+  .buttonDecode {
+    max-width: 500px;
+    color: #0a3871;
+    background-color: #fff;
+    border: solid 1px;
+  }
+  .articleModalMessageNotFound {
+    display: block;
+  }
+  #modal {
+    display: none;
+    width: 40%;
+    height: 100px;
+    align-items: center;
+    margin: auto;
+    margin-top: 52px;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.08);
+  }
+  .titleModal {
+    text-align: center;
+    font-size: 17px;
+    padding: 12px;
+  }
+  .contentModal {
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+    padding-bottom: 50px;
+  }
+  #resultmodal {
+    display: none;
+    width: 90vw;
+    margin: 0 auto;
+    border: solid 1px #151515;
+    border-radius: 15px;
+  }
+  #resultTextArea {
+    display: block;
+    border: none;
+    height: 40vh;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .footer {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    background-color: #f3f5fc;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+  }
+  .mainFocus {
+    background-color: f3f5fc;
+    display: grid;
+    grid-template-rows: 16fr 0.5fr 2fr;
+    grid-template-columns: repeat(1fr, 1fr);
+    gap: 10px;
+  }
+  #TextArea {
+    margin: 50px 0px 0px 12.5vw;
+    border: none;
+    background-color: #ffffff;
+    height: 50vh;
+    font-size: 30px;
+  }
+  #atencionMessage {
+    margin: 0px 0px 0px 12.5vw;
+    background-image: url(./atencion.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left;
+    padding-left: 20px;
+  }
+  .articleModalMessageNotFound {
+    background-color: #fff;
+    margin: 30px 20px 30px 20px;
+  }
+  #modal {
+    display: block;
+    text-align: center;
+  }
+  #imageTextNotFound {
+    display: block;
+    height: 65vh;
+    margin: 0 auto;
+  }
+  #resultmodal {
+    display: none;
+    width: 90%;
+    height: 80%;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .warning {
+    padding-bottom: 35px;
+  }
+  #resultTextArea {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    height: 90%;
+    width: 90%;
+    font-size: 30px;
+    border: none;
+    border-radius: 15px;
+  }
+  .full-height {
+    grid-row: 1 / span 2;
+  }
+  .mainButtons {
+    margin: 0 auto;
+  }
+  .buttonEncode,
+  .buttonDecode {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 15px;
+    margin: 5px 10px 5px 10px;
+    font-size: 16px;
+  }
+  .buttonCopy {
+    max-width: 500px;
+    color: #fff;
+    background-color: #0a3871;
+    border: none;
+  }
+  .buttonDecode {
+    max-width: 500px;
+    color: #0a3871;
+    background-color: #d8dfe8;
+    border: solid 1px;
+  }
+  .footer {
+    margin: 50px 0px 25px 25px;
+  }
+}
